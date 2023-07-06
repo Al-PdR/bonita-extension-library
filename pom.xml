@@ -16,7 +16,29 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
 		<bonita-runtime.version>8.0.0</bonita-runtime.version>
+		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
     </properties>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>${maven-release-plugin.version}</version>
+					<configuration>
+						<tagNameFormat>v@{project.version}</tagNameFormat>
+						<indentSize>4</indentSize>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	
+	<scm>
+		<developerConnection>scm:git:https://github.com/Al-PdR/bonita-extension-library.git</developerConnection>
+		<connection>scm:git:https://github.com/Al-PdR/bonita-extension-library.git</connection>
+		<url>https://github.com/Al-PdR/bonita-extension-library</url>
+	</scm>
 	
 	<dependencyManagement>
 		<dependencies>
