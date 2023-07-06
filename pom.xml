@@ -40,6 +40,14 @@
 		<url>https://github.com/Al-PdR/bonita-extension-library</url>
 	</scm>
 	
+	<distributionManagement>
+		<repository>
+		  <id>github</id>
+		  <name>GitHub Packages</name>
+		  <url>https://maven.pkg.github.com/Al-PdR/bonita-extension-library</url>
+		</repository>
+	</distributionManagement>
+	
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
